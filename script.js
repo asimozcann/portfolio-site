@@ -1,8 +1,10 @@
-//!Navbar Yönetimi
+//! Navbar Yönetimi
 const header = document.getElementById("header");
 
+// Navbar'daki tüm linkleri seçiyoruz
 const aTags = header.querySelectorAll("a");
 
+// Scroll olduğunda header ve linklere "scrolled" class'ı ekleyip çıkarıyoruz
 aTags.forEach((navbarList) => {
   window.addEventListener("scroll", () => {
     if (window.scrollY > 500) {
@@ -14,10 +16,13 @@ aTags.forEach((navbarList) => {
     }
   });
 });
-//!Active
+
+//! Active Link Yönetimi
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-link");
 
+// Sayfa scroll edilince hangi bölümde olduğumuzu kontrol edip
+// o bölüme ait navbar linkine "active" class'ı ekliyoruz
 window.addEventListener("scroll", () => {
   let current = "";
 
@@ -38,26 +43,22 @@ window.addEventListener("scroll", () => {
   });
 });
 
-//! Hakkımda Bölümü
+//! Hakkımda Bölümü - Progress Bar Ayarları
 const progressBars = document.querySelectorAll(".progress-bar");
 const progressSpans = document.querySelectorAll(".progress-width");
 
 progressBars.forEach((progressBar, index) => {
   const progressSpan = progressSpans[index];
-
   const progressValue = parseInt(progressSpan.innerHTML);
-
   const progressBarWidth = progressBar.offsetWidth;
 
+  // Progress bar genişliğini ve span konumunu ayarla
   const progressBarSet = (progressBarWidth * progressValue) / 100;
-
-  progressSpan.style.left = `${
-    progressBarSet - progressSpan.offsetWidth / 2
-  }px`;
-
+  progressSpan.style.left = `${progressBarSet - progressSpan.offsetWidth / 2}px`;
   progressBar.style.setProperty("--progress-width", `${progressBarSet}px`);
 });
-//! İletişim Bölümü
+
+//! İletişim Bölümü - Input ve Textarea Focus Yönetimi
 const fields = document.querySelectorAll("input, textarea");
 
 // Aktif alanın class'ını ayarla
