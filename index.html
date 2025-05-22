@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asım Özcan | Front-End Developer</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="container">
+        <div class="logo">
+          <a href="#home">AÖ</a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#home" class="nav-link">Ana Sayfa</a></li>
+            <li><a href="#about" class="nav-link">Hakkımda</a></li>
+            <li><a href="#my-project" class="nav-link">Projeler</a></li>
+            <li><a href="#contact" class="nav-link">İletişim</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="bg">
+      <section class="hero" id="home">
+        <div class="container">
+          <div class="content">
+            <h1>
+              Selam, Ben Asım Özcan <br />
+              Front-End Developer
+            </h1>
+            <span>React & Javascript odaklı projeler geliştiriyorum.</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="bio" id="about">
+      <div class="container">
+        <div class="bio-left">
+          <img src="images/about-3.jpg" alt="" />
+        </div>
+        <div class="bio-right">
+          <h1>Hakkımda</h1>
+          <p>
+            Merhaba, ben 29 yaşında bilgisayar programcılığı mezunu bir
+            Front-End geliştirici adayım. HTML ve CSS konusunda güçlü bir
+            altyapım var; JavaScript bilgim ise orta seviyede. Şu anda React
+            öğreniyorum ve her gün kendimi bu alanda geliştirmek için projeler
+            geliştiriyor, kaynaklar inceliyorum. Kod yazmayı, arayüz tasarımıyla
+            uğraşmayı ve kullanıcı deneyimini iyileştirmeyi çok seviyorum.
+          </p>
+          <p>
+            Tasarımdan koda geçiş sürecinde hem görsel hem de teknik detaylara
+            önem veririm. Problem çözme becerim güçlü ve her zaman daha iyisini
+            yapma motivasyonuyla çalışırım. Boş zamanlarımda spor yapar, Marvel
+            filmleri izler ve yazılımla ilgili yeni konuları araştırırım.
+            Front-End dünyasında kendime sağlam bir yer edinmek istiyorum.
+          </p>
+          <div class="skills">
+            <ul>
+              <li>Design</li>
+              <div class="progress-bagit init
+r">
+                <span class="progress-width">95%</span>
+              </div>
+              <li>HTML5</li>
+              <div class="progress-bar">
+                <span class="progress-width">90%</span>
+              </div>
+              <li>CSS3</li>
+              <div class="progress-bar">
+                <span class="progress-width">90%</span>
+              </div>
+              <li>JS</li>
+              <div class="progress-bar">
+                <span class="progress-width">75%</span>
+              </div>
+              <li>React</li>
+              <div class="progress-bar">
+                <span class="progress-width">45%</span>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="my-project" class="project">
+      <div class="container">
+        <h1 class="card-h1">Projeler</h1>
+        <div class="card-wrapper">
+          <div class="card">
+            <img src="images/card.jpg" alt="" />
+            <div class="card-info">
+              <h3>Proje Adı</h3>
+              <span>Açıklama</span>
+            </div>
+          </div>
+          <div class="card">
+            <img src="images/card.jpg" alt="" />
+          </div>
+          <div class="card">
+            <img src="images/card.jpg" alt="" />
+          </div>
+          <div class="card">
+            <img src="images/card.jpg" alt="" />
+          </div>
+          <div class="card">
+            <img src="images/card.jpg" alt="" />
+          </div>
+          <div class="card">
+            <img src="images/card.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact-wrapper">
+      <div class="container">
+        <h1 class="contact-h1">Bana Ulaşın</h1>
+        <div class="contact">
+          <form class="form">
+            <div class="name-group">
+              <div class="form-group">
+                <label for="first-name">Adın</label>
+                <input type="text" id="first-name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="last-name">Soyadın</label>
+                <input type="text" id="last-name" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" required />
+            </div>
+
+            <div class="form-group">
+              <label>Mesajın</label>
+              <textarea id="message" rows="6"></textarea>
+            </div>
+
+            <button type="submit">Gönder</button>
+          </form>
+          <div class="contact-info">
+            <h3>İletişim Bilgileri</h3>
+
+            <div class="info-item">
+              <span class="material-symbols-outlined">location_on</span>
+              <p>29 Yeni Mah. Antalya/Türkiye 07350</p>
+            </div>
+
+            <div class="info-item">
+              <span class="material-symbols-outlined"> call </span>
+              <p>+90 532 123 45 67</p>
+            </div>
+
+            <div class="info-item">
+              <span class="material-symbols-outlined">email</span>
+              <p>ornek@email.com</p>
+            </div>
+
+            <div class="info-item">
+              <span class="material-symbols-outlined">language</span>
+              <p>www.siteniz.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-about">
+            <h3>Hakkımda</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Molestiae, fugiat.
+            </p>
+            <div class="social">
+              <h3>Bağlantılar</h3>
+              <ul class="icons">
+                <li>
+                  <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fa-solid fa-globe"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-nav">
+            <h3>Yetenekler</h3>
+            <ul>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>Bootstrap</li>
+              <li>React</li>
+            </ul>
+          </div>
+          <div class="footer-services">
+            <h3>Servisler</h3>
+            <ul>
+              <li>Web Design</li>
+              <li>eCommerce</li>
+              <li>WordPress</li>
+              <li>Front-End</li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3>İletişim</h3>
+            <ul>
+              <li class="contact-item">29 Yeni Mah. Antalya/Türkiye 07350</li>
+
+              <li class="contact-item">+90 532 123 45 67</li>
+
+              <li class="contact-item">ornek@email.com</li>
+
+              <li class="contact-item">www.siteniz.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          Copyright ©2025 All rights reserved | Asım Özcan
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>

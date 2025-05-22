@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  letter-spacing: 1px;
+}
+h1 {
+  font-size: 35px;
+  font-weight: 500;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2 0px;
+}
+.project,
+.contact-wrapper {
+  padding: 40px 0px;
+}
+.bg {
+  height: 100vh;
+  background-image: url(images/bg-2.jpg);
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 70px;
+  transition: background-color 0.8s ease;
+}
+#about {
+  scroll-margin-top: 140px;
+}
+.nav-link.active {
+  color: blueviolet;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.header a {
+  color: white;
+}
+.header.scrolled {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  color: black;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 100px; /* header sabit olduğu için boşluk bırak */
+}
+
+.logo a {
+  font-size: 22px;
+  border: 2px solid white;
+  text-decoration: none;
+  color: white;
+  padding: 3px;
+}
+.logo a.scrolled {
+  color: black;
+  border-color: black;
+}
+
+nav ul {
+  display: flex;
+  gap: 40px;
+  list-style-type: none;
+}
+nav ul li a {
+  letter-spacing: 3px;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+nav ul li a.scrolled {
+  color: black;
+}
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.content {
+  color: white;
+}
+.content h1 {
+  font-size: 35px;
+}
+
+.bio .container {
+  margin-top: 70px;
+  display: flex;
+  gap: 40px;
+}
+.bio-left {
+  flex: 1;
+}
+.bio-left img {
+  width: 100%;
+}
+.bio-right {
+  padding: 10px 20px;
+  flex: 1;
+}
+
+.bio-right p {
+  font-size: 14px;
+  color: gray;
+  margin: 20px 0px;
+}
+.skills ul {
+  list-style-type: none;
+}
+.skills ul li {
+  font-size: 18px;
+  margin: 9px 0px;
+}
+.skills .progress-bar {
+  position: relative;
+  border-bottom: 5px solid;
+  border-radius: 2px;
+  border-color: rgba(128, 128, 128, 0.641);
+}
+.skills .progress-bar::before {
+  content: "";
+  position: absolute;
+  border-bottom: 5px solid blueviolet;
+  width: var(--progress-width, 0px);
+  border-radius: 2px;
+}
+.skills .progress-bar span {
+  position: absolute;
+  top: 10px;
+  left: -15px;
+  background-color: blueviolet;
+  font-size: 12px;
+  color: white;
+  padding: 2px;
+  border-radius: 3px;
+}
+.skills .progress-bar span::after {
+  content: "";
+  position: absolute;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid blueviolet;
+  top: -5px;
+  left: 10px;
+}
+
+.card-h1 {
+  text-align: center;
+  margin: 60px 0px;
+}
+.card-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card img {
+  position: relative;
+  width: 100%;
+  transition: transform 0.3s ease;
+  display: block;
+  z-index: 1;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.3s ease;
+  z-index: 2;
+}
+
+.card:hover::before {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.card-info {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.card:hover .card-info {
+  opacity: 1;
+}
+.contact-h1 {
+  margin: 70px 0;
+  text-align: center;
+}
+.contact {
+  display: flex;
+  gap: 80px;
+}
+.form {
+  flex: 2;
+}
+.form-group {
+  width: 100%;
+  line-height: 2;
+}
+.form-group input.active {
+  border-bottom: 1px solid rgb(129, 1, 248);
+}
+.form-group textarea.active {
+  border-bottom: 1px solid rgb(129, 1, 248);
+}
+.form-group label {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 20px;
+}
+.form-group input,
+textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid;
+  outline: none;
+  font-size: 17px;
+}
+.name-group {
+  display: flex;
+  gap: 45px;
+}
+.contact-info {
+  flex: 1;
+}
+.contact-info h3 {
+  font-weight: 500;
+}
+.contact button {
+  cursor: pointer;
+  padding: 12px;
+  font-size: 18px;
+  color: white;
+  background-color: blueviolet;
+  border: none;
+  border-radius: 17px;
+  margin-bottom: 45px;
+  transition: all 0.5s ease;
+}
+.contact button:hover {
+  background-color: rgba(137, 43, 226, 0.725);
+}
+.info-item {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+.info-item span {
+  margin-right: 10px;
+}
+footer {
+  background-color: #efefef;
+  padding: 60px 0;
+}
+.footer-content {
+  display: flex;
+  line-height: 2.5;
+  font-size: 13px;
+}
+.footer-content h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 15px 0;
+}
+.footer-about {
+  margin-right: 35px;
+}
+.footer-about p {
+  color: gray;
+}
+.social .icons {
+  display: flex;
+}
+.social .icons li {
+  margin: 0 2px;
+}
+.social .icons li a {
+  text-decoration: none;
+  color: white;
+  background-color: #777877;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+.social .icons li a:hover {
+  background-color: blueviolet;
+}
+.footer-content ul li {
+  list-style-type: none;
+  color: gray;
+}
+.footer-about,
+.footer-nav,
+.footer-services,
+.footer-contact {
+  flex: 1;
+}
+.copyright {
+  font-size: 13px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.46);
+  margin: 20px 0;
+}
