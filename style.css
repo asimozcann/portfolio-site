@@ -98,6 +98,11 @@ nav ul li a {
 nav ul li a.scrolled {
   color: black;
 }
+nav a:hover {
+  color: #ff6600;
+  transition: color 0.3s ease;
+}
+
 .hero {
   display: flex;
   justify-content: center;
