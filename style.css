@@ -190,11 +190,13 @@ nav a:hover {
 .card {
   position: relative;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .card img {
   position: relative;
   width: 100%;
+  height: 100%;
   transition: transform 0.3s ease;
   display: block;
   z-index: 1;
