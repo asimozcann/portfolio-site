@@ -10,13 +10,28 @@ aTags.forEach((navbarList) => {
     if (window.scrollY > 500) {
       header.classList.add("scrolled");
       navbarList.classList.add("scrolled");
+      burger.classList.add("scrolled");
     } else {
       header.classList.remove("scrolled");
       navbarList.classList.remove("scrolled");
+      burger.classList.remove("scrolled");
     }
   });
 });
-
+//! Burger Menü Yönetimi
+const burger = document.querySelector(".fa-bars");
+const closeBurger = document.querySelector(".fa-x");
+const nav = header.querySelector("nav");
+burger.addEventListener("click", () => { 
+  nav.style.left = "71px";
+  burger.style.display = "none";
+  closeBurger.style.display = "block";
+ })
+closeBurger.addEventListener("click", () => {
+  nav.style.left = "600px";
+  burger.style.display = "block";
+  closeBurger.style.display = "none";
+})
 //! Active Link Yönetimi
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-link");
@@ -49,12 +64,14 @@ const progressSpans = document.querySelectorAll(".progress-width");
 
 progressBars.forEach((progressBar, index) => {
   const progressSpan = progressSpans[index];
-  const progressValue = parseInt(progressSpan.innerHTML);
+  const progressValue = parseInt(progressSpan.innerText.replace("%", ""));
   const progressBarWidth = progressBar.offsetWidth;
 
   // Progress bar genişliğini ve span konumunu ayarla
   const progressBarSet = (progressBarWidth * progressValue) / 100;
-  progressSpan.style.left = `${progressBarSet - progressSpan.offsetWidth / 2}px`;
+  progressSpan.style.left = `${
+    progressBarSet - progressSpan.offsetWidth / 2
+  }px`;
   progressBar.style.setProperty("--progress-width", `${progressBarSet}px`);
 });
 
