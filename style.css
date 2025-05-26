@@ -262,6 +262,7 @@ transition: all 0.4s ease-out;
   margin-bottom: 7px;
 }
 .card-info p {
+  padding: 0 20px;
   font-size: 14px;
   margin-bottom: 10px;
   color: #dcdcdc;
